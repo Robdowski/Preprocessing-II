@@ -1,1 +1,28 @@
 // Mixins in here
+
+.flexify(@display:flex, @direction: row, @justify:center, @align:center){
+    display:@display;
+    flex-direction:@direction;
+    justify-content:@justify;
+    align-items:@align;
+}
+
+.buttonme(@width: 200px, @bgcolor:#008B8B, @color:#fff){
+    display:block;
+    width:@width;
+    background-color:@bgcolor;
+    color:@color;
+    cursor:pointer;
+    padding: 10px;
+    border-radius: 5px;
+
+    &:hover{
+        color: @color * 1.25;
+        background-color:@bgcolor * 1.25;
+    }
+
+    &:active{
+        transform: translatex(2px);
+        transform: translatey(2px);
+    }
+}
